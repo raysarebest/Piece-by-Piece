@@ -1,0 +1,11 @@
+@-ms-viewport{
+    width: device-width;
+}
+
+$background: #fff8f3 !default;
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: $background;
+}
