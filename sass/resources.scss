@@ -1,0 +1,58 @@
+@import "compass/css3/flexbox";
+@import "base";
+
+#main-head{
+    .row{
+        width: 100%;
+    }
+    h1{
+        margin: 0 $spacing;
+        margin: {
+            top: 10px;
+        }
+        font-weight: bold;
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    h2{
+        text-transform: uppercase;
+    }
+    h3{
+        padding: 20px;
+        border: 1px solid #000;
+        text-transform: uppercase;
+        cite{
+            font-style: normal;
+        }
+    }
+    p{
+        font-weight: bold;
+        font-style: italic;
+    }
+}
+
+#info{
+    @include align-items(flex-start);
+}
+
+table{
+    max-width: 90%;
+    margin: 30px 0;
+    th, td{
+        text-transform: uppercase;
+    }
+    th{
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    td{
+        word-wrap: break-word;
+        width: 25%;
+        max-width: 25vw;
+        &:first-child{
+            width: 50%;
+            max-width: 50vw;
+        }
+    }
+}
