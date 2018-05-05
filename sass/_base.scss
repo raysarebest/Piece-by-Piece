@@ -1,11 +1,37 @@
+@import "compass/css3/box-sizing";
+@import "compass/css3/flexbox";
+
 @-ms-viewport{
     width: device-width;
 }
 
-$background: #fff8f3 !default;
+$background: #fff8f3;
+$primary-text-color: #000;
+$subheading-color: #278acc;
+
+$safe-area-size: 5%;
+$box-border-size: 2pt;
 
 html, body{
     width: 100%;
-    height: 100%;
+    height: 100vw;
+    margin: 0;
     background: $background;
+}
+
+body{
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    text-align: center;
+    height: fit-content;
+}
+
+main.container-fluid{
+    $size: 100% - ($safe-area-size * 2);
+    min-height: $size;
+    width: $size;
+    margin: $safe-area-size auto;
+    border: $box-border-size solid $primary-text-color;
 }
