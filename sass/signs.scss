@@ -1,0 +1,67 @@
+@import "compass/css3/flexbox";
+@import "base";
+
+header{
+    h1{
+        margin: 0 $spacing;
+        margin: {
+            top: 10px;
+        }
+        font-weight: bold;
+    }
+    p{
+        margin: {
+            bottom: 0;
+        }
+    }
+}
+
+#full-rule{
+    width: 100%;
+    $rule-height: 1px;
+    height: $rule-height;
+    margin: $spacing 0;
+    hr{
+        width: 80%;
+        height: $rule-height;
+        background-color: $caption-color;
+        margin: 0;
+    }
+}
+
+#signs{
+    .row{
+        width: 100%;
+    }
+    h2{
+        font-weight: normal;
+    }
+    .symptom{
+        height: 200px;
+        img{
+            @include aspect-ratio(30%);
+            &#toys{
+                @include aspect-ratio(75%);
+            }
+            &#heart-bulb{
+                @include aspect-ratio(20%);
+                margin: {
+                    bottom: 1rem;
+                };
+            }
+            &#kid-spaced{
+                @include aspect-ratio(15%);
+            }
+            &#robot{
+                @include aspect-ratio(25%);
+            }
+        }
+        div{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}

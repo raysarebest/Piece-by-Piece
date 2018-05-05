@@ -1,0 +1,18 @@
+@import "compass/css3/font-face";
+
+@function brandon-font-file($style: "", $extension: ""){
+    $folder: to-lower-case($style);
+    @return "/css/fonts/brandon/#{$folder}/BrandonGrotesque-#{$style}.#{$extension}";
+}
+
+@function all-brandon-font-files($style: ""){
+    @return font-files(brandon-font-file($style, "woff2"), brandon-font-file($style, "woff"), brandon-font-file($style, "ttf"), brandon-font-file($style, "svg"));
+}
+
+@mixin brandon-font($name, $weight: normal, $style: normal){
+    @include font-face("Brandon", all-brandon-font-files($name), brandon-font-file($name, "eot"), to-lower-case($weight), to-lower-case($style));
+}
+
+@include brandon-font("Regular", normal, normal);
+@include brandon-font("RegularItalic", normal, italic);
+@include brandon-font("Bold", bold, normal);

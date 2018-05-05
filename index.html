@@ -16,38 +16,43 @@
   <link rel="stylesheet" href="css/home.css" type="text/css" title="global-stylesheet"/>
   <!--This links to a favicon (the little image in the address bar) of the page. Be sure to change the href the the location of your favicon on your server, or remove the line and this comment altogether-->
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" sizes=""/>
-  <!--This is an example of a prefetch. These will be silently cached by the browser, in case the user visits them next. You may want to add multiple tags of this, or remove the line and this comment altogether, but don't forget to change the href to what's next (or whatever you want cached)-->
-  <link rel="prefetch" href="nextPage.html"/>
-  <!--The next 5 tags are for pagination. The first link specifies the next page the user will visit, and the second tag specifies the last page they likely visited. You'll want to link to these in <a> tags later in the document. There's also links for the first and last page in the series, and also "up", which indicates something of a table of contents. Change the href in each tag, or remove one or more of them and this comment altogether-->
-  <link rel="next" href="next.html"/>
-  <link rel="prev" href="prev.html"/>
-  <link rel="first" href="first.html"/>
-  <link rel="last" href="last.html"/>
+  <link rel="prefetch" href="signs.html"/>
+  <link rel="prefetch" href="aid.html"/>
+  <link rel="prefetch" href="resources.html"/>
 </head>
 <body>
   <main class="container-fluid">
     <header class="row">
         <div class="row">
-          <img src="img/home/puzzle-piece.svg"/>
+          <img src="img/puzzle-piece.svg"/>
         </div>
         <div class="row">
           <h1>Piece by Piece</h1>
         </div>
     </header>
     <section id="options" class="row">
-      <div class="col">
-        <img src="img/home/question-mark.svg"/>
-        <h2>Definition &amp; Identifiers</h2>
+      <div class="col button">
+        <a href="signs.html">
+          <img src="img/question-mark.svg"/>
+          <h2>Definition &amp; Identifiers</h2>
+        </a>
       </div>
-      <div class="col">
-        <img src="img/home/puzzle-plus.svg"/>
-        <h2>Complimentary State Aid</h2>
+      <div class="col button">
+        <a href="aid.html">
+          <img src="img/puzzle-plus.svg"/>
+          <h2>Complimentary State Aid</h2>
+        </a>
       </div>
-      <div class="col">
-        <img src="img/home/map.svg"/>
-        <h2>Middle TN Resources</h2>
+      <div class="col button">
+        <a href="resources.html">
+          <img src="img/map.svg"/>
+          <h2>Middle TN Resources</h2>
+        </a>
       </div>
     </section>
+    <footer class="row">
+      <p>Email <a href="mailto:piecebypiecetn@gmail.com">piecebypiecetn@gmail.com</a> for more information. This site was made with &hearts; by <a href="https://hulet.tech">Michael Hulet</a>.</p>
+    </footer>
   </main>
 </body>
 </html>

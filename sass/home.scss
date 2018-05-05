@@ -1,48 +1,59 @@
 @import "compass/css3/flexbox";
 @import "base";
 
-$spacing: 30px;
-
 header{
     height: 50%;
     .row{
-        @include justify-content(center);
-        @include align-items(center);
+        
         height: 50%;
         width: 100%;
+        margin: auto;
         img{
             margin: {
                 left: -4%
             }
-            $logo-size: 100%;
+            $logo-size: 15%;
             width: $logo-size;
             height: $logo-size;
+            @media (orientation: portrait){
+                $logo-size: $logo-size * 2;
+                width: $logo-size;
+                height: $logo-size;
+            }
         }
     }
 
     h1{
         margin: $spacing;
         height: fit-content;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 }
 
 #options{
-    height: 50%;
+    height: fit-content;
+    .col{
+        height: fit-content;
+    }
     img{
-        $size: 80%;
-        height: 80%;
-        width: 80%;
+        $size: 50%;
+        height: $size;
+        width: $size;
     }
     h2{
         color: $subheading-color;
+        font-style: italic;
         margin: {
             top: 10px;
         }
     }
 }
 
-main.container-fluid{
-    padding: $spacing;
-    height: 100%;
-    min-height: 700px;
+.button{
+    $button-spacing: 30px;
+    margin: {
+        top: $button-spacing;
+        bottom: $button-spacing;
+    };
 }
